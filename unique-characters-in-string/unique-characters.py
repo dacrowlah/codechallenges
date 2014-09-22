@@ -22,19 +22,14 @@ def sorter_scan(string_to_scan):
 
 def scan_characters(string_to_scan):
     i = 0
-    has_duplicates = False
 
     while i < len(string_to_scan):
         n = i + 1
         while n < len(string_to_scan):
             if string_to_scan[i] == string_to_scan[n]:
-                has_duplicates = True
                 print '%s - is duplicated at %s' % (string_to_scan[i], n + 1)
             n +=1
         i += 1
-
-    if not has_duplicates:
-        print 'no duplicates found'
 
 
 if __name__ == '__main__':
