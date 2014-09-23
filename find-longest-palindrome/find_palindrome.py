@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 
-def find_longest_palindrome(string, case_insensitive = False):
+def find_longest_palindrome(string, case_insensitive=False):
 
     str_length = len(string)
     i = 0
@@ -28,7 +28,8 @@ def find_longest_palindrome(string, case_insensitive = False):
         i += 1
 
     return the_match
-           
+
+
 if __name__ == "__main__":
 
     input_strings = [
@@ -47,4 +48,4 @@ if __name__ == "__main__":
 
     print 'case insensitive'
     for input_str in input_strings:
-        print find_longest_palindrome(input_str, case_insensitive = True)
+        print find_longest_palindrome(input_str, case_insensitive=True)
