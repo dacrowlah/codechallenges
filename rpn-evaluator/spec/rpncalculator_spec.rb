@@ -1,5 +1,11 @@
 require_relative '../rpncalculator'
 
+describe RPNCalculator, "#new" do
+    it "returns an instance of RPNCalculator" do
+        expect(RPNCalculator.new).to be_an_instance_of RPNCalculator
+    end
+end
+
 describe RPNCalculator, "#calculate" do
     it "returns 3 for '1 2 +'" do
         rpn = RPNCalculator.new
@@ -31,6 +37,10 @@ describe RPNCalculator, "#calculate" do
         expect { rpn.calculate("3 /") }.to raise_error
     end
     it "raises invalid arguments error for 'a b /'" do
+        rpn = RPNCalculator.new
+        expect { rpn.calculate("a b /") }.to raise_error
+    end
+    it "raises invalid arguments error for '2 3 + 4 x /'" do
         rpn = RPNCalculator.new
         expect { rpn.calculate("a b /") }.to raise_error
     end

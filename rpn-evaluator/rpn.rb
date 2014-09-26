@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
 
 require_relative 'rpncalculator'
-rpn = RPNCalculator.new
+
 begin
+    rpn = RPNCalculator.new
     puts rpn.calculate(ARGV[0])
 rescue StandardError => ex
     puts ex
